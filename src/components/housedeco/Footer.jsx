@@ -1,5 +1,10 @@
-const IMG = "https://darkorange-zebra-814695.hostingersite.com/wp-content/uploads/sites/2/2021/05/";
-const pages = ["Privacy Policy", "Term Of Service", "Disclaimer", "Credit", "FAQ"];
+const pages = [
+  { label: "Inicio", href: "/#INICIO" },
+  { label: "Nosotros", href: "/#NOSOTROS" },
+  { label: "Servicios", href: "/#SERVICIOS" },
+  { label: "Proyectos", href: "/constructions/modular" },
+  { label: "Contacto", href: "/#CONTACTO" },
+];
 
 export default function Footer() {
   return (
@@ -14,12 +19,12 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <h3 className="text-white font-semibold uppercase tracking-wide text-sm mb-5">Other Pages</h3>
+          <h3 className="text-white font-semibold uppercase tracking-wide text-sm mb-5">Navegación</h3>
           <ul className="space-y-2">
             {pages.map((p) =>
-            <li key={p}>
-                <a href="#" className="text-white/60 hover:text-[#f04a19] text-sm transition-colors">
-                  {p}
+            <li key={p.label}>
+                <a href={p.href} className="text-white/60 hover:text-[#f04a19] text-sm transition-colors">
+                  {p.label}
                 </a>
               </li>
             )}
@@ -27,9 +32,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 gap-px mb-8">
-        <img src="/images/bfe0f3c8c_WhatsAppImage2026-s-08at55718PM.jpeg" alt="" className="w-full h-32 object-cover" />
-        <img src="/images/67fd379db__DSC9829.jpg" alt="" className="w-full h-32 object-cover" />
-        <img src="/images/400ae64de_DJI_0770.jpg" alt="" className="w-full h-32 object-cover" />
+        <img src="/images/diseno-1A.jpg" alt="" className="w-full h-32 object-cover" />
+        <img src="/images/diseno-1B.jpg" alt="" className="w-full h-32 object-cover" />
+        <img src="/images/diseno-1C.jpg" alt="" className="w-full h-32 object-cover" />
       </div>
       <div className="border-t border-white/10 pt-6 text-center">
         <p className="text-white/40 text-sm">Copyright 2026 © InCubo. All rights reserved | Powered by Lis Medina & Diego Santellan</p>

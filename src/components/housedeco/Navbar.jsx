@@ -2,24 +2,31 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, Lock } from "lucide-react";
 
-const IMG = "https://darkorange-zebra-814695.hostingersite.com/wp-content/uploads/sites/2/2021/05/";
-const navItems = ["INICIO", "NOSOTROS", "SERVICIOS", "PÁGINAS", "CONTACTO"];
+const navItems = [
+  { label: "INICIO", href: "/#INICIO" },
+  { label: "NOSOTROS", href: "/#NOSOTROS" },
+  { label: "SERVICIOS", href: "/#SERVICIOS" },
+  { label: "PÁGINAS", href: "/constructions/modular" },
+  { label: "CONTACTO", href: "/#CONTACTO" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header className="bg-[#1a1a1a] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        <img src="/images/77d7fa0b2_logo.png" alt="Incubo" className="h-9 w-auto" />
+        <Link to="/#INICIO" aria-label="Ir al inicio">
+          <img src="/images/77d7fa0b2_logo.png" alt="Incubo" className="h-9 w-auto" />
+        </Link>
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item, i) => (
             <a
-              key={item}
-              href="#"
+              key={item.label}
+              href={item.href}
               className="text-white text-[13px] font-semibold tracking-wider uppercase flex items-center gap-1 hover:text-[#f04a19] transition-colors"
             >
-              {item}
-              {i !== 0 && i !== 4 && <ChevronDown className="w-3 h-3" />}
+              {item.label}
+              {i == 2 && <ChevronDown className="w-3 h-3" />}
             </a>
           ))}
         </nav>
@@ -33,8 +40,8 @@ export default function Navbar() {
       {open && (
         <nav className="md:hidden bg-[#1a1a1a] px-6 pb-4 flex flex-col gap-3 border-t border-white/10">
           {navItems.map((item) => (
-            <a key={item} href="#" className="text-white text-sm uppercase font-semibold tracking-wider">
-              {item}
+            <a key={item.label} href={item.href} onClick={() => setOpen(false)} className="text-white text-sm uppercase font-semibold tracking-wider">
+              {item.label}
             </a>
           ))}
           <Link to="/admin-login" className="text-white/50 text-sm uppercase font-semibold tracking-wider inline-flex items-center gap-1.5 pt-3 border-t border-white/10">

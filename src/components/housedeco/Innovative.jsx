@@ -21,7 +21,7 @@ export default function Innovative() {
 
           </p>
           <a
-            href="#"
+            href="#CONTACTO"
             className="inline-block border border-[#f04a19] text-[#f04a19] px-8 py-3 text-[13px] font-semibold tracking-wider uppercase hover:bg-[#f04a19] hover:text-[#1a1a1a] transition-colors">PEDÍ TU DISEÑO
 
 

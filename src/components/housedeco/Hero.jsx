@@ -35,13 +35,13 @@ export default function Hero() {
         </h1>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
           <a
-            href="#"
-            className="border border-[#f04a19] text-white px-8 py-3 text-[13px] font-semibold tracking-wider uppercase hover:bg-[#f04a19] hover:text-[#1a1a1a] transition-colors">hablemos
+            href="#CONTACTO"
+            className="border border-white text-white px-8 py-3 text-[13px] font-semibold tracking-wider uppercase hover:border-[#f04a19] hover:bg-[#f04a19] hover:text-[#1a1a1a] transition-colors">hablemos
 
 
           </a>
           <a
-            href="#"
+            href="#SERVICIOS"
             className="border border-[#f04a19] text-[#f04a19] px-8 py-3 text-[13px] font-semibold tracking-wider uppercase hover:bg-[#f04a19] hover:text-[#1a1a1a] transition-colors">proyectos
 
 

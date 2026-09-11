@@ -1,14 +1,14 @@
 const panels = [
 {
-  img: "/images/00dcaa308_generated_image.png",
-  title: "BOXER CONTAINERS",
-  text: "Venta de contenedores marítimos nuevos, usados y refrigerados. Soluciones de almacenamiento robustas y versátiles.",
-  cta: "Ver construccines modulares\u2192"
+  img: "/images/diseno-3A.jpg",
+  title: "CONSTRUCCIÓN MODULAR",
+  text: "Módulos habitables pensados para viviendas, oficinas, cabañas y diferentes necesidades. Soluciones funcionales que hacen más simple el proceso de construir.",
+  cta: "VER CONSTRUCCIONES MODULARES\u2192"
 },
 {
   img: "/images/3c6da8d60_generated_image.png",
-  title: "BOXER SOLUCIONES HABITABLES",
-  text: "Módulos habitables, viviendas modulares, oficinas y soluciones para campo e industria.",
+  title: "STEEL FRAMING",
+  text: "Viviendas y proyectos a medida con estructura de acero galvanizado. Un sistema constructivo moderno, eficiente y adaptable a diferentes diseños.",
   cta: "Ver construccines steel framing\u2192"
 }];
 
@@ -28,16 +28,16 @@ export default function SolutionsSplit() {
         style={{
           backgroundImage: `url(${p.img})`,
           backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundPosition: i === 0 ? "center 35%" : "center"
         }}>
         
           <div className="absolute inset-0 bg-black/55 group-hover:bg-black/45 transition-colors duration-500" />
           <Reveal delay={i * 0.1} className="relative z-10 max-w-md group-hover:-translate-y-1 transition-transform duration-500">
-            <h2 className="text-white font-bold uppercase text-3xl md:text-4xl mb-4 leading-tight">{p.title}</h2>
+            <h2 className="text-white font-bold uppercase text-3xl md:text-4xl md:whitespace-nowrap mb-4 leading-tight">{p.title}</h2>
             <p className="text-white/85 text-sm md:text-base leading-relaxed mb-8">{p.text}</p>
             <Link
             to={routes[i]}
-            className="inline-block bg-white text-[#1a1a1a] rounded-full px-7 py-3 text-sm font-semibold uppercase tracking-wider hover:bg-[#f04a19] hover:text-white transition-colors">
+            className="inline-block bg-white text-[#1a1a1a] px-7 py-3 text-sm font-semibold uppercase tracking-wider hover:bg-[#f04a19] hover:text-white transition-colors">
 
               {p.cta}
             </Link>

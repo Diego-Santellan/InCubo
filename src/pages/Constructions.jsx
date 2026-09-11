@@ -11,8 +11,8 @@ import Reveal from "@/components/housedeco/Reveal";
 const MEDIA = "/images/";
 
 const TYPE_MAP = {
-  modular: { label: "Construcciones Modulares", value: "Modular", banner: MEDIA + "06ca59fe8_WhatsAppImage2026-s-08at55718PM.jpeg" },
-  "steel-framing": { label: "Construcciones Steel Framing", value: "Steel Framing", banner: MEDIA + "a0eeb59a0__DSC9829.jpg" },
+  modular: { label: "Construcciones Modulares", value: "Modular", banner: MEDIA + "diseno-2A.jpeg" },
+  "steel-framing": { label: "Construcciones Steel Framing", value: "Steel Framing", banner: MEDIA + "diseno-1A.jpg" },
 };
 
 export default function Constructions() {
@@ -35,7 +35,13 @@ export default function Constructions() {
 
       {/* Banner principal */}
       <section className="relative min-h-[42vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${cfg.banner})` }} />
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${cfg.banner})`,
+            backgroundPosition: cfg.value === "Modular" ? "center 85%" : "center",
+          }}
+        />
         <div className="absolute inset-0 bg-[#000000]/[0.5]" />
         <div className="relative z-10 text-center px-6 py-20">
           <h1 className="text-white font-bold uppercase tracking-tight leading-[0.95] text-[36px] md:text-6xl">{cfg.label}</h1>
