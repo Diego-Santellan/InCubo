@@ -19,15 +19,23 @@ export default function Testimonials() {
             de quienes ya confiaron en InCubo y descubrí por qué elegirnos es el primer paso para construir con tranquilidad.
           </p>
         </Reveal>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0">
           {testimonials.map((t, i) =>
-            <Reveal key={t.name} delay={i * 0.15} className="bg-[#1f1f1f] p-8 text-center flex flex-col justify-end hover:-translate-y-1 transition-transform duration-300">
+            <Reveal key={t.name} delay={i * 0.15} className="min-w-[85%] snap-center bg-[#1f1f1f] p-8 text-center flex flex-col justify-end hover:-translate-y-1 transition-transform duration-300 md:min-w-0">
               <p className="text-white/80 italic mb-6 min-h-[96px] flex items-center justify-center">"{t.quote}"</p>
               <img src="/images/person-icon.png" alt="" className="w-16 h-16 rounded-full mx-auto object-cover mb-3" />
               <p className="text-[#f04a19] font-semibold capitalize">{t.name}</p>
               <p className="text-white/50 text-sm uppercase tracking-wider">cliente</p>
             </Reveal>
           )}
+        </div>
+        <div className="flex justify-center mt-12">
+          <a
+            href="#CONTACTO"
+            className="border border-[#f04a19] text-[#f04a19] px-8 py-3 text-[13px] font-semibold tracking-wider uppercase hover:bg-[#f04a19] hover:text-white transition-colors"
+          >
+            Hablemos de tu proyecto
+          </a>
         </div>
       </div>
     </section>);

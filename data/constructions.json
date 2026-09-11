@@ -1,38 +1,66 @@
 [
   {
-    "title": "das",
-    "subtitle": "jhj",
-    "description": "jhj",
-    "pdf_link": "hj",
+    "title": "Vivienda Modular Familiar",
+    "subtitle": "Diseño funcional para disfrutar todos los días",
+    "description": "Una solución modular pensada para una familia que buscaba comodidad, rapidez de ejecución y espacios luminosos adaptados a su forma de vivir.",
+    "pdf_link": "",
     "type": "Modular",
     "images": [
-      "/uploads/1789133708892-ozr43q.png"
+      "/images/diseno-2A.jpeg",
+      "/images/diseno-2B.jpeg",
+      "/uploads/1789165357343-le07m8.jpg",
+      "/uploads/1789165357367-9uqcks.jpg",
+      "/uploads/1789165357384-m0ycqh.jpg",
+      "/uploads/1789165357403-4gprod.jpg",
+      "/uploads/1789165357426-f4he9n.jpg",
+      "/uploads/1789165357442-f95scc.jpg"
     ],
-    "id": "1789133709834-aub6fv",
+    "id": "modular-vivienda-familiar",
     "created_date": "2026-09-11T13:35:09.834Z"
   },
   {
-    "title": "casca",
-    "subtitle": "jkbj",
-    "description": "kbkjkj",
-    "pdf_link": "bkjbkjb",
-    "type": "Steel Framing",
-    "images": [
-      "/uploads/1789133727395-jhd3p1.png"
-    ],
-    "id": "1789133729026-muwec2",
-    "created_date": "2026-09-11T13:35:29.026Z"
-  },
-  {
-    "title": "sxa",
-    "subtitle": "hjjv",
-    "description": "hj",
-    "pdf_link": "hv",
+    "title": "Módulo Habitable Contemporáneo",
+    "subtitle": "Una obra ágil, eficiente y a medida",
+    "description": "Módulo habitable desarrollado para ampliar un espacio existente con una estética moderna, excelente aprovechamiento de cada ambiente y terminaciones de calidad.",
+    "pdf_link": "",
     "type": "Modular",
     "images": [
-      "/uploads/1789133739961-jyl9pp.png"
+      "/images/diseno-3A.jpg",
+      "/uploads/1789165481821-0qmtj7.jpg",
+      "/uploads/1789165481844-21p77k.jpg",
+      "/uploads/1789165481867-yhvmhk.jpg",
+      "/uploads/1789165481889-u7mngc.jpg",
+      "/uploads/1789165481907-wrd29m.jpg"
     ],
-    "id": "1789133741218-f6l97x",
+    "id": "modular-modulo-contemporaneo",
     "created_date": "2026-09-11T13:35:41.218Z"
+  },
+  {
+    "title": "Vivienda Steel Framing",
+    "subtitle": "Estructura eficiente y adaptable",
+    "description": "Proyecto residencial con estructura de acero galvanizado, diseñado para lograr confort, rapidez de obra y excelente aislación térmica.",
+    "pdf_link": "",
+    "type": "Steel Framing",
+    "images": [
+      "/images/diseno-1A.jpg",
+      "/images/diseno-1B.jpg",
+      "/images/diseno-1C.jpg"
+    ],
+    "id": "steel-vivienda-adaptable",
+    "created_date": "2026-09-11T13:36:00.000Z"
+  },
+  {
+    "title": "Casa Steel Framing a Medida",
+    "subtitle": "Precisión constructiva y diseño personalizado",
+    "description": "Una vivienda proyectada según las necesidades de sus habitantes, combinando estructura resistente, confort interior y un proceso constructivo optimizado.",
+    "pdf_link": "",
+    "type": "Steel Framing",
+    "images": [
+      "/uploads/1789165035600-3r8bc6.jpg",
+      "/uploads/1789165035776-dt1un2.jpg",
+      "/uploads/1789165035912-llds3j.jpg"
+    ],
+    "id": "steel-casa-a-medida",
+    "created_date": "2026-09-11T13:36:30.000Z"
   }
 ]

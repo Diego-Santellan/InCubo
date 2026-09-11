@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/ui/toaster"
+import { MessageCircle } from "lucide-react";
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -59,6 +60,16 @@ function App() {
           <AuthenticatedApp />
         </Router>
         <Toaster />
+        <a
+          href="https://wa.me/5492494599292?text=Hola%2C%20te%20hablo%20desde%20la%20web."
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Contactar por WhatsApp"
+          title="Contactar por WhatsApp"
+          className="fixed bottom-6 right-6 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-[#1a1a1a]"
+        >
+          <MessageCircle className="h-7 w-7" />
+        </a>
       </QueryClientProvider>
     </AuthProvider>
   )
