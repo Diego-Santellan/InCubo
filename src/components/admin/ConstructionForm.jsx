@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Upload, X, Loader2 } from "lucide-react";
-import { base44 } from "@/api/base44Client";
+import { localClient } from "@/api/localClient";
 
 const empty = { title: "", subtitle: "", description: "", pdf_link: "", type: "Modular", images: [] };
 
@@ -8,6 +8,7 @@ export default function ConstructionForm({ initial, onSave, onCancel }) {
   const [form, setForm] = useState(initial || empty);
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState("");
 
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
@@ -18,7 +19,7 @@ export default function ConstructionForm({ initial, onSave, onCancel }) {
     try {
       const urls = [];
       for (const file of files) {
-        const { file_url } = await base44.integrations.Core.UploadPublicFile({ file });
+        const { file_url } = await localClient.integrations.Core.UploadPublicFile({ file });
         urls.push(file_url);
       }
       setForm({ ...form, images: [...form.images, ...urls] });
@@ -31,10 +32,13 @@ export default function ConstructionForm({ initial, onSave, onCancel }) {
 
   const submit = async (e) => {
     e.preventDefault();
+    setError("");
     setSaving(true);
     try {
       await onSave(form);
       if (!initial) setForm(empty);
+    } catch (saveError) {
+      setError(saveError.message || "No se pudo guardar la obra.");
     } finally {
       setSaving(false);
     }
@@ -94,6 +98,8 @@ export default function ConstructionForm({ initial, onSave, onCancel }) {
           </div>
         )}
       </div>
+
+      {error && <p className="text-[#f04a19] text-sm">{error}</p>}
 
       <div className="flex items-center gap-3 pt-2">
         <button type="submit" disabled={saving || uploading} className="bg-[#f04a19] text-white px-8 py-3 text-[13px] font-semibold tracking-wider uppercase hover:bg-[#1a1a1a] transition-colors disabled:opacity-50">

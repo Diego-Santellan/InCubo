@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { LogOut, Plus, X } from "lucide-react";
-import { base44 } from "@/api/base44Client";
+import { localClient } from "@/api/localClient";
 import { isAdminAuthed, logoutAdmin } from "@/lib/adminAuth";
 import ConstructionForm from "@/components/admin/ConstructionForm";
 import ConstructionList from "@/components/admin/ConstructionList";
@@ -25,7 +25,7 @@ export default function AdminPanel() {
   const load = async () => {
     setLoading(true);
     try {
-      const data = await base44.entities.Construction.list("-created_date", 200);
+      const data = await localClient.entities.Construction.list("-created_date", 200);
       setItems(data);
     } finally {
       setLoading(false);
@@ -34,14 +34,14 @@ export default function AdminPanel() {
 
   const onSave = async (form) => {
     if (editing) {
-      await base44.entities.Construction.update(editing.id, form);
+      await localClient.entities.Construction.update(editing.id, form);
       setEditing(null);
       setShowForm(false);
     } else {
-      await base44.entities.Construction.create(form);
+      await localClient.entities.Construction.create(form);
       setShowForm(false);
     }
-    load();
+    await load();
   };
 
   const onEdit = (c) => {
@@ -51,7 +51,7 @@ export default function AdminPanel() {
 
   const onDelete = async (c) => {
     if (window.confirm(`¿Eliminar "${c.title}"?`)) {
-      await base44.entities.Construction.delete(c.id);
+      await localClient.entities.Construction.delete(c.id);
       load();
     }
   };

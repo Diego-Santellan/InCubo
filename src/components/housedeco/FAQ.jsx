@@ -28,15 +28,15 @@ export default function FAQ() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <Reveal className="relative h-[440px] hidden md:block">
             <img
-              src="https://media.base44.com/images/public/6aa05ccb4d9baaa5807a33d9/e346c9377_IMG_20211019_081618.jpg"
+              src="/images/e346c9377_IMG_20211019_081618.jpg"
               alt=""
               className="absolute top-12 left-8 w-60 h-44 object-cover shadow-xl hover:scale-105 transition-transform duration-500" />
             <img
-              src="https://media.base44.com/images/public/6aa05ccb4d9baaa5807a33d9/f093a213f_IMG_20220208_093421.jpg"
+              src="/images/f093a213f_IMG_20220208_093421.jpg"
               alt=""
               className="absolute top-0 right-8 w-60 h-44 object-cover shadow-xl hover:scale-105 transition-transform duration-500" />
             <img
-              src="https://media.base44.com/images/public/6aa05ccb4d9baaa5807a33d9/77ba66278_IMG-20210604-WA0006.jpg"
+              src="/images/77ba66278_IMG-20210604-WA0006.jpg"
               alt=""
               className="absolute top-16 left-1/2 -translate-x-1/2 w-52 h-80 object-cover shadow-2xl" />
           </Reveal>

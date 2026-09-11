@@ -3,7 +3,7 @@ import Reveal from "@/components/housedeco/Reveal";
 
 export default function Contact() {
   return (
-    <section className="bg-[#f7f4ef] py-20 md:py-28">
+    <section id="CONTACTO" className="bg-[#f7f4ef] py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
         <Reveal>
           <p className="text-[#f04a19] text-sm font-semibold uppercase tracking-widest mb-3">contacto</p>

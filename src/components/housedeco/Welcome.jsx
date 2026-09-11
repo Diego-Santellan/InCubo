@@ -1,16 +1,8 @@
 import Reveal from "@/components/housedeco/Reveal";
 
-const IMG = "https://darkorange-zebra-814695.hostingersite.com/wp-content/uploads/sites/2/2021/05/";
-const images = [
-"spacious-grey-living-room-interior-2XERHJN.jpg",
-"home-office-interior-in-modern-natural-style-98DLTQ3.jpg",
-"lamp-next-to-dark-couch-with-pink-blanket-in-white-H4KZ8LS.jpg",
-"interior-with-dining-table-PRPTKDT.jpg"];
-
-
 export default function Welcome() {
   return (
-    <section className="bg-[#f7f4ef] py-20 md:py-28">
+    <section id="NOSOTROS" className="bg-[#f7f4ef] py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <Reveal>
           <p className="text-[#f04a19] text-sm font-semibold uppercase tracking-widest mb-3">quienes somos</p>
@@ -37,7 +29,10 @@ export default function Welcome() {
           </div>
         </Reveal>
         <Reveal delay={0.15}>
-          <img src={IMG + images[0]} alt="" className="w-full h-[420px] object-cover hover:scale-[1.02] transition-transform duration-500" />
+          <div className="group relative overflow-hidden">
+            <img src="/images/quienes-somos.png" alt="" className="w-full h-[420px] object-cover group-hover:scale-[1.01] transition-transform duration-500" />
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#f04a19]/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          </div>
         </Reveal>
       </div>
     </section>);

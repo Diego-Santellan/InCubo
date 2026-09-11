@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FileDown, ArrowLeft } from "lucide-react";
-import { base44 } from "@/api/base44Client";
+import { localClient } from "@/api/localClient";
 import TopBar from "@/components/housedeco/TopBar";
 import Navbar from "@/components/housedeco/Navbar";
 import Footer from "@/components/housedeco/Footer";
 import ConstructionCarousel from "@/components/housedeco/ConstructionCarousel";
 import Reveal from "@/components/housedeco/Reveal";
 
-const MEDIA = "https://media.base44.com/images/public/6aa05ccb4d9baaa5807a33d9/";
+const MEDIA = "/images/";
 
 const TYPE_MAP = {
   modular: { label: "Construcciones Modulares", value: "Modular", banner: MEDIA + "06ca59fe8_WhatsAppImage2026-s-08at55718PM.jpeg" },
@@ -23,7 +23,7 @@ export default function Constructions() {
 
   useEffect(() => {
     setLoading(true);
-    base44.entities.Construction.filter({ type: cfg.value }, "-created_date", 100)
+    localClient.entities.Construction.filter({ type: cfg.value }, "-created_date", 100)
       .then((data) => setItems(data))
       .finally(() => setLoading(false));
   }, [type]);

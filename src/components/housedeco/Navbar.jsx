@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <header className="bg-[#1a1a1a] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        <img src="https://media.base44.com/images/public/6aa05ccb4d9baaa5807a33d9/77d7fa0b2_logo.png" alt="Incubo" className="h-9 w-auto" />
+        <img src="/images/77d7fa0b2_logo.png" alt="Incubo" className="h-9 w-auto" />
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item, i) => (
             <a

@@ -1,12 +1,12 @@
 const panels = [
 {
-  img: "https://media.base44.com/images/public/6aa05ccb4d9baaa5807a33d9/00dcaa308_generated_image.png",
+  img: "/images/00dcaa308_generated_image.png",
   title: "BOXER CONTAINERS",
   text: "Venta de contenedores marítimos nuevos, usados y refrigerados. Soluciones de almacenamiento robustas y versátiles.",
   cta: "Ver construccines modulares\u2192"
 },
 {
-  img: "https://media.base44.com/images/public/6aa05ccb4d9baaa5807a33d9/3c6da8d60_generated_image.png",
+  img: "/images/3c6da8d60_generated_image.png",
   title: "BOXER SOLUCIONES HABITABLES",
   text: "Módulos habitables, viviendas modulares, oficinas y soluciones para campo e industria.",
   cta: "Ver construccines steel framing\u2192"
@@ -20,7 +20,7 @@ const routes = ["/constructions/modular", "/constructions/steel-framing"];
 
 export default function SolutionsSplit() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
+    <section id="SERVICIOS" className="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
       {panels.map((p, i) =>
       <div
         key={i}

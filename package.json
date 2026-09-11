@@ -1,10 +1,10 @@
 {
-  "name": "base44-app",
+  "name": "incubo-site",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"node server/index.js\" \"vite\"",
     "build": "vite build",
     "lint": "eslint . --quiet",
     "lint:fix": "eslint . --fix",
@@ -12,8 +12,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@base44/sdk": "^0.8.48",
-    "@base44/vite-plugin": "^1.0.36",
     "@hello-pangea/dnd": "^17.0.0",
     "@hookform/resolvers": "^4.1.2",
     "@radix-ui/react-accordion": "^1.2.3",
@@ -48,6 +46,7 @@
     "@tanstack/react-query": "^5.84.1",
     "canvas-confetti": "^1.9.4",
     "class-variance-authority": "^0.7.1",
+    "cors": "^2.8.5",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
@@ -72,6 +71,8 @@
     "react-router-dom": "^6.26.0",
     "recharts": "^2.15.4",
     "sonner": "^2.0.1",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.171.0",
@@ -83,6 +84,7 @@
     "@types/node": "^22.13.5",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "concurrently": "^9.2.1",
     "@vitejs/plugin-react": "^6.0.5",
     "autoprefixer": "^10.4.20",
     "baseline-browser-mapping": "^2.8.32",

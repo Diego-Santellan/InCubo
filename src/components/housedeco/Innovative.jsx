@@ -1,13 +1,14 @@
 import Reveal from "@/components/housedeco/Reveal";
 
-const IMG = "https://darkorange-zebra-814695.hostingersite.com/wp-content/uploads/sites/2/2021/05/";
-
 export default function Innovative() {
   return (
     <section className="bg-[#141414] py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <Reveal>
-        <img src={IMG + "spacious-grey-living-room-interior-2XERHJN.jpg"} alt="" className="w-full h-[420px] object-cover hover:scale-[1.02] transition-transform duration-500" />
+        <div className="group relative overflow-hidden">
+          <img src="/images/diseno-innovador.jpg" alt="" className="w-full h-[420px] object-cover grayscale group-hover:grayscale-0 transition-[filter] duration-500" />
+          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#f04a19]/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        </div>
         </Reveal>
         <Reveal delay={0.15}>
         <div>

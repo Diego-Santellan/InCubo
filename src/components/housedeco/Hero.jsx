@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-const MEDIA = "https://media.base44.com/images/public/6aa05ccb4d9baaa5807a33d9/";
+const MEDIA = "/images/";
 const slides = [
-MEDIA + "aadd9195f_DJI_0770.jpg",
-MEDIA + "a7f3e7984_DJI_0773.jpg",
-MEDIA + "4a42822a5_WhatsAppImage2026-09-08at55718PM.jpeg",
-MEDIA + "06ca59fe8_WhatsAppImage2026-s-08at55718PM.jpeg",
-MEDIA + "a0eeb59a0__DSC9829.jpg"];
+MEDIA + "diseno-1A.jpg",
+MEDIA + "diseno-1B.jpg",
+MEDIA + "diseno-1C.jpg",
+MEDIA + "diseno-2A.jpeg",
+MEDIA + "diseno-2B.jpeg"];
 
 
 export default function Hero() {
@@ -17,7 +17,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="INICIO" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {slides.map((s, idx) =>
       <div
         key={idx}
