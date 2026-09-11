@@ -1,0 +1,42 @@
+{
+  "name": "Construction",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "T\u00edtulo"
+    },
+    "subtitle": {
+      "type": "string",
+      "title": "Subt\u00edtulo"
+    },
+    "description": {
+      "type": "string",
+      "title": "Descripci\u00f3n"
+    },
+    "pdf_link": {
+      "type": "string",
+      "title": "Link de PDF"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Modular",
+        "Steel Framing"
+      ],
+      "title": "Tipo"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "title": "Im\u00e1genes",
+      "default": []
+    }
+  },
+  "required": [
+    "title",
+    "type"
+  ]
+}

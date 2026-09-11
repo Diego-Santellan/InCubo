@@ -1,0 +1,53 @@
+import { useState, useEffect } from "react";
+
+const MEDIA = "https://media.base44.com/images/public/6aa05ccb4d9baaa5807a33d9/";
+const slides = [
+MEDIA + "aadd9195f_DJI_0770.jpg",
+MEDIA + "a7f3e7984_DJI_0773.jpg",
+MEDIA + "4a42822a5_WhatsAppImage2026-09-08at55718PM.jpeg",
+MEDIA + "06ca59fe8_WhatsAppImage2026-s-08at55718PM.jpeg",
+MEDIA + "a0eeb59a0__DSC9829.jpg"];
+
+
+export default function Hero() {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setI((p) => (p + 1) % slides.length), 6000);
+    return () => clearInterval(t);
+  }, []);
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {slides.map((s, idx) =>
+      <div
+        key={idx}
+        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[2500ms] ${idx === i ? "opacity-100" : "opacity-0"}`}
+        style={{ backgroundImage: `url(${s})` }} />
+
+      )}
+      <div className="absolute inset-0 bg-[#000000]/[0.5]" />
+      <div className="relative z-10 text-center px-6">
+        <h1 className="text-[#f04a19] font-bold uppercase tracking-tight leading-[0.95] text-[36px] md:text-7xl lg:text-7xl">construcción modular
+
+        </h1>
+        <h1 className="text-white font-bold uppercase tracking-tight leading-[0.95] mt-2 text-[36px] md:text-7xl lg:text-7xl">steel framing
+
+        </h1>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+          <a
+            href="#"
+            className="border border-[#f04a19] text-white px-8 py-3 text-[13px] font-semibold tracking-wider uppercase hover:bg-[#f04a19] hover:text-[#1a1a1a] transition-colors">hablemos
+
+
+          </a>
+          <a
+            href="#"
+            className="border border-[#f04a19] text-[#f04a19] px-8 py-3 text-[13px] font-semibold tracking-wider uppercase hover:bg-[#f04a19] hover:text-[#1a1a1a] transition-colors">proyectos
+
+
+          </a>
+        </div>
+      </div>
+    </section>);
+
+}
