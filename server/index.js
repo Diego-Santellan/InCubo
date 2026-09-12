@@ -35,6 +35,7 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: "1mb" }));
 app.use("/uploads", express.static(uploadsDirectory));
+app.use(express.static(path.join(root, "dist")));
 
 app.get("/api/constructions", async (request, response) => {
   const items = await readConstructions();
@@ -69,6 +70,11 @@ app.post("/api/uploads", upload.single("file"), (request, response) => {
   response.status(201).json({ file_url: `/uploads/${request.file.filename}` });
 });
 
-app.listen(3001, "127.0.0.1", () => {
-  console.log("Local API running at http://127.0.0.1:3001");
+app.use((_request, response) => {
+  response.sendFile(path.join(root, "dist", "index.html"));
+});
+
+const port = process.env.PORT || 3001;
+app.listen(port, "0.0.0.0", () => {
+  console.log(`API and frontend running on port ${port}`);
 });
