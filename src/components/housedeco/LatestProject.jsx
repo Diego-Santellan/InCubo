@@ -21,9 +21,9 @@ export default function LatestProject() {
             qué necesitás y preparemos juntos una propuesta para tu próximo proyecto.
           </p>
         </Reveal>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0">
           {projects.map((p, i) => (
-            <Reveal key={p.title} delay={i * 0.1} className="group hover:-translate-y-1 transition-transform duration-300">
+            <Reveal key={p.title} delay={i * 0.1} className="min-w-[85%] snap-center group hover:-translate-y-1 transition-transform duration-300 md:min-w-0">
               <div className="relative overflow-hidden">
                 <img
                   src={p.img}
