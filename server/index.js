@@ -48,6 +48,10 @@ async function main() {
         res.sendFile(path.join(root, "dist", "admin.html"));
     });
 
+    // después de tus rutas API y antes de app.listen
+    app.get("*", (_req, res) => {
+        res.sendFile(path.join(root, "dist", "index.html"));
+    });
 
     const port = process.env.PORT || 3001;
     app.listen(port, "0.0.0.0", () => {
