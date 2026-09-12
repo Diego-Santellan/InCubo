@@ -1,5 +1,5 @@
-const TOP = "Eficiencia. Innovación Tecnológica. Elegancia.";
-const BOTTOM = "Soluciones Integrales";
+const TOP = "Eficiencia • Innovación Tecnológica • Elegancia • Eficiencia • Innovación Tecnológica • Elegancia";
+const BOTTOM = "Soluciones Integrales • InCubo • Soluciones Integrales • InCubo";
 
 export default function TaglineBanner() {
   const topLoop = Array(6).fill(TOP).join("  •  ");

@@ -34,9 +34,9 @@ html {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
-    --font-body: 'Poppins', ui-sans-serif, system-ui, sans-serif;
-    --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: 'Saira', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Saira', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Saira', ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
