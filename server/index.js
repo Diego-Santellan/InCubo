@@ -39,19 +39,7 @@ async function main() {
     app.use(express.static(path.join(root, "dist")));
 
     // tus rutas aquí...
-    app.get("/admin-login", (req, res) => {
-        // Podés devolver un HTML, un JSON o redirigir
-        res.sendFile(path.join(root, "dist", "admin-login.html"));
-    });
 
-    app.get("/admin", (req, res) => {
-        res.sendFile(path.join(root, "dist", "admin.html"));
-    });
-
-    // después de tus rutas API y antes de app.listen
-    app.get("*", (_req, res) => {
-        res.sendFile(path.join(root, "dist", "index.html"));
-    });
 
     const port = process.env.PORT || 3001;
     app.listen(port, "0.0.0.0", () => {
