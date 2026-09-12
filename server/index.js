@@ -39,7 +39,13 @@ async function main() {
     app.use(express.static(path.join(root, "dist")));
 
     // tus rutas aquí...
+      app.get("/admin-login", (_req, res) => {
+    res.sendFile(path.join(root, "dist", "index.html"));
+  });
 
+  app.get("/admin", (_req, res) => {
+    res.sendFile(path.join(root, "dist", "index.html"));
+  });
 
     const port = process.env.PORT || 3001;
     app.listen(port, "0.0.0.0", () => {
